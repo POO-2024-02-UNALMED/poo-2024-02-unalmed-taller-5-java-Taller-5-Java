@@ -1,4 +1,4 @@
 package zooAnimales;
-public class Mamifero extends Animales {
+public class Mamifero extends Animal {
 
 }
