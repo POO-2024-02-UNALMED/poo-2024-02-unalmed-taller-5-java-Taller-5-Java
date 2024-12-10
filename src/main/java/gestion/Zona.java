@@ -1,6 +1,6 @@
 package gestion;
 import zooAnimales.Animal;
-public class Zona extends Zoologico{
+public class Zona {
   private String nombre;
   private Zoologico[] zoo = new Zoologico[1];
   private Animal[] animales;
