@@ -7,6 +7,17 @@ public class Reptil extends Animal{
   private String colorEscamas;
   private Integer largoCola;
 
+  public Reptil() {
+    }
+  public Reptil(Reptil[] listado, Integer iguanas, Integer serpientes, String colorEscamas, Integer largoCola) {
+        this.listado = listado;
+        this.iguanas = iguanas;
+        this.serpientes = serpientes;
+        this.colorEscamas = colorEscamas;
+        this.largoCola = largoCola;
+    }
+
+  
   public void cantidadReptiles(){
     
   }
