@@ -9,23 +9,21 @@ public class Zoologico {
     private ArrayList<Zona> zonas;
 
     public Zoologico() {
-        this.zonas = new ArrayList<>();  // Inicializar la lista de zonas
+        this.zonas = new ArrayList<>();  
     }
 
     public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.zonas = new ArrayList<>();  // Inicializar la lista de zonas
+        this.zonas = new ArrayList<>();
     }
 
     public void agregarZona(Zona zona) {
-        this.zonas.add(zona);  // Añadir zona a la lista
+        this.zonas.add(zona);
     }
 
     public int cantidadTotalAnimales() {
         int totalAnimales = 0;
-
-        // Iterar sobre la lista de zonas y sumar los animales
         for (Zona zona : zonas) {
             totalAnimales += zona.cantidadAnimales();
         }
