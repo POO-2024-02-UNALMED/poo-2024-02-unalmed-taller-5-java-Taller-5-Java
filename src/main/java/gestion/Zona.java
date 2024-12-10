@@ -14,10 +14,24 @@ public class Zona {
         this.animales = animales;
     }
 
-  public void agregarAnimales(){
-    
-  }
-  public void cantidadAnimales(){
-    
+public void agregarAnimales(Animal animal) {
+
+    for (int i = 0; i < animales.length; i++) {
+      if (animales[i] == null) {
+        animales[i] = animal; 
+        return; 
+      }
+    }
+}
+  public int cantidadAnimales() {
+    int total = 0;
+
+    for (int i = 0; i < animales.length; i++) {
+      if (animales[i] != null) {
+        total++;
+      }
+    }
+
+    return total; // Retorna el total de animales en la zona
   }
 }
