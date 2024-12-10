@@ -2,39 +2,42 @@ package zooAnimales;
 
 public class Mamifero extends Animal {
 
-    private Mamifero[] listado = new Mamifero[0];
-    public int caballos = 0;
-    public int leones = 0;
+    private static Mamifero[] listado = new Mamifero[0]; 
+    public static int caballos = 0; 
+    public static int leones = 0;  
     private Boolean pelaje;
     private Integer patas;
 
     public Mamifero() {
         agregarAlListado(this);
     }
+
     public Mamifero(String nombre, Integer edad, String habitat, String genero, Boolean pelaje, Integer patas) {
-    super(nombre, edad, habitat, genero, null);
+        super(nombre, edad, habitat, genero, null);
         this.pelaje = pelaje;
         this.patas = patas;
         agregarAlListado(this);
     }
-    public int cantidadMamiferos() {
+
+    public static int cantidadMamiferos() {
         return listado.length;
     }
 
-    public Mamifero crearCaballo(String nombre, Integer edad,String genero) {
-        Mamifero caballo = new Mamifero(nombre,edad ,"pradera", genero, true, 4);
+    public static Mamifero crearCaballo(String nombre, Integer edad, String genero) {
+        Mamifero caballo = new Mamifero(nombre, edad, "pradera", genero, true, 4);
         caballos++;
         agregarAlListado(caballo);
         return caballo;
     }
 
-    public Mamifero crearLeon(String nombre,Integer edad, String genero) {
-        Mamifero leon = new Mamifero(nombre, edad,"selva", genero, true, 4);
+    public static Mamifero crearLeon(String nombre, Integer edad, String genero) {
+        Mamifero leon = new Mamifero(nombre, edad, "selva", genero, true, 4);
         leones++;
         agregarAlListado(leon);
         return leon;
     }
-    private void agregarAlListado(Mamifero mamifero) {
+
+    private static void agregarAlListado(Mamifero mamifero) {
         Mamifero[] nuevoListado = new Mamifero[listado.length + 1];
         for (int i = 0; i < listado.length; i++) {
             nuevoListado[i] = listado[i];
@@ -43,13 +46,17 @@ public class Mamifero extends Animal {
         listado = nuevoListado;
     }
 
+    public static String movimiento() {
+        return "caminar";
+    }
+
     // Getters y Setters
-    public Mamifero[] getListado() {
+    public static Mamifero[] getListado() {
         return listado;
     }
 
-    public void setListado(Mamifero[] listado) {
-        this.listado = listado;
+    public static void setListado(Mamifero[] listado) {
+        Mamifero.listado = listado;
     }
 
     public Boolean getPelaje() {
