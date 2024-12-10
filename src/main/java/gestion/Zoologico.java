@@ -35,4 +35,29 @@ public class Zoologico {
         return totalAnimales;
         
 }
+  // Getters y Setters
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public Zona[] getZonas() {
+        return zonas;
+    }
+
+    public void setZonas(Zona[] zonas) {
+        this.zonas = zonas;
+    }
 }
