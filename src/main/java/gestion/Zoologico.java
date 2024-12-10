@@ -15,10 +15,23 @@ public class Zoologico {
     }
 
   
-  public void agregarZonas(){
-    
-  }
-  public void cantidadTotalAnimales(){
-    
-  }
+    public void agregarZonas(Zona zona) {
+        for (int i = 0; i < zonas.length; i++) {
+            if (zonas[i] == null) {
+                zonas[i] = zona;
+                return;
+            }
+      }
+    }
+
+    public int cantidadTotalAnimales() {
+        int totalAnimales = 0;
+      
+        for (int i = 0; i < zonas.length; i++) {
+            if (zonas[i] != null) {
+                totalAnimales += zonas[i].cantidadAnimales(); 
+        }
+      }
+        return totalAnimales;
+        
 }
