@@ -3,19 +3,20 @@ public class Reptil extends Animal{
   
   private Reptil[] listado;
   public Integer iguanas;
-  public Integer aguilas;
-  private String colorPlumas;
+  public Integer serpientes;
+  private String colorEscamas;
+  private Integer largoCola;
 
-  public void cantidadAves(){
+  public void cantidadReptiles(){
     
   }
   public void movimiento(){
     
   } 
-  public void crearHalcon(){
+  public void crearIguana(){
     
   }
-  public void crearAguila(){
+  public void crearSerpientes(){
     
   }
 }
