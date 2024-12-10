@@ -31,7 +31,7 @@ public class Animal {
         this.genero = genero;
         this.zona = zona;
       }
-  public String movimiento(){
+  static public String movimiento(){
     return "desplazarse";
   }
 
@@ -114,14 +114,14 @@ public class Animal {
 @Override
 public String toString() {
     String resultado = "Mi nombre es " + nombre +
-                       ", tengo " + (edad != null ? edad + " años" : "una edad desconocida") + 
+                       ", tengo " + (edad != null ? edad + " anos" : "una edad desconocida") + 
                        ", habito en " + habitat + 
                        " y mi genero es " + genero;
     if (zona != null && zona[0] != null) {
         resultado += ", la zona en la que me ubico es " + zona[0].getNombre() +
                      ", en el " + (zona[0].getZoo()[0] != null ? zona[0].getZoo()[0].getNombre() : "zoo desconocido");
     }
-    return resultado;  // Aquí es donde debe devolverse el resultado
+    return resultado; 
 }
 
 }
