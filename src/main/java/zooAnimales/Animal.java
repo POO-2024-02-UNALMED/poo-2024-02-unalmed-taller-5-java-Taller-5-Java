@@ -1,4 +1,7 @@
 package zooAnimales;
-public class Animal extends Zona {
+
+import gestion.Zona;
+
+public class Animal {
 
 }
