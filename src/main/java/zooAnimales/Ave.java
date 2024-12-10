@@ -22,14 +22,14 @@ public class Ave extends Animal {
     }
 
     public Ave crearHalcon(String nombre, String genero) {
-        Ave halcon = new Ave(nombre, "montañas", genero, "café glorioso");
+        Ave halcon = new Ave(nombre, "montanas", genero, "cafe glorioso");
         halcones++;
         agregarAlListado(halcon);
         return halcon;
     }
 
     public Ave crearAguila(String nombre, String genero) {
-        Ave aguila = new Ave(nombre, "montañas", genero, "blanco y amarillo");
+        Ave aguila = new Ave(nombre, "montanas", genero, "blanco y amarillo");
         aguilas++;
         agregarAlListado(aguila);
         return aguila;
