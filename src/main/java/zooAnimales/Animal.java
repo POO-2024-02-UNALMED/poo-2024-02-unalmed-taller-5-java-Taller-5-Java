@@ -114,7 +114,7 @@ public class Animal {
   @Override
   public String toString() {
       String resultado = "Mi nombre es " + nombre +
-                         ", tengo " + (edad != null ? edad + " años" : "una edad desconocida") + 
+                         ", tengo " + (edad != null ? edad + " anos" : "una edad desconocida") + 
                          ", habito en " + habitat + 
                          " y mi genero es " + genero;
       if (zona != null && zona[0] != null) {
