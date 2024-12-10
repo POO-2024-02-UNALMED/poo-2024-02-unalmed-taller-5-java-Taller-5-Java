@@ -35,7 +35,7 @@ public class Animal {
     return "desplazarse";
   }
 
-  public String totalPorTipo(Animal[] animales) {
+public String totalPorTipo(Animal[] animales) {
     int mamiferos = 0;
     int aves = 0;
     int reptiles = 0;
@@ -62,7 +62,8 @@ public class Animal {
            "Reptiles: " + reptiles + "\n" +
            "Peces: " + peces + "\n" +
            "Anfibios: " + anfibios;
-  }
+}
+
    // Getters y Setters
 
     public Integer getTotalAnimales() {
