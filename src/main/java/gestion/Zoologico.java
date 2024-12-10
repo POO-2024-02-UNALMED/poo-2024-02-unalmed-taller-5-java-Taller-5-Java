@@ -53,11 +53,11 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
 
-    public Zona[] getZonas() {
+    public Zona[] getZona() {
         return zonas;
     }
 
-    public void setZonas(Zona[] zonas) {
+    public void setZona(Zona[] zonas) {
         this.zonas = zonas;
     }
 }
