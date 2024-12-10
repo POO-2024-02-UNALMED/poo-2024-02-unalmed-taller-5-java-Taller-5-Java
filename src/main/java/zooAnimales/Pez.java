@@ -20,8 +20,8 @@ public class Pez extends Animal{
   public void cantidadPeces(){
     
   }
-  public void movimiento(){
-    
+  public String movimiento(){
+    return "nadar";
   }
   public void crearSalmon(){
     
