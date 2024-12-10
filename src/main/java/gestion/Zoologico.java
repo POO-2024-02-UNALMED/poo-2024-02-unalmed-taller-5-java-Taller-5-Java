@@ -53,9 +53,13 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
 
-    public Zona[] getZona() {
-        return zonas;
+    public Zona getZona(int index) {
+    if (index >= 0 && index < zonas.length) {
+        return zonas[index];
     }
+    return null; 
+}
+
 
     public void setZona(Zona[] zonas) {
         this.zonas = zonas;
