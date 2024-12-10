@@ -60,7 +60,48 @@ public class Animal {
            "Peces: " + peces + "\n" +
            "Anfibios: " + anfibios;
   }
+   // Getters y Setters
 
+    public Integer getTotalAnimales() {
+        return totalAnimales;
+    }
+
+    public void setTotalAnimales(Integer totalAnimales) {
+        this.totalAnimales = totalAnimales;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Zona[] getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona[] zona) {
+        this.zona = zona;
+    }
+  
   @Override
   public String toString() {
         String resultado = "Mi nombre es " + nombre +
