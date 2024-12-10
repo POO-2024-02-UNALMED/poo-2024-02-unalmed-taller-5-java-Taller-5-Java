@@ -23,13 +23,13 @@ public class Reptil extends Animal {
         return listado.length;
     }
     public Reptil crearIguana(String nombre, Integer edad, String genero) {
-        Reptil iguana = new Reptil(nombre, "humedal", genero, "verde", 3);
+        Reptil iguana = new Reptil(nombre, edad,"humedal", genero, "verde", 3);
         iguanas++;
         agregarAlListado(iguana);
         return iguana;
     }
     public Reptil crearSerpiente(String nombre, Integer edad,String genero) {
-        Reptil serpiente = new Reptil(nombre, "jungla", genero, "blanco", 1);
+        Reptil serpiente = new Reptil(nombre, edad,"jungla", genero, "blanco", 1);
         serpientes++;
         agregarAlListado(serpiente);
         return serpiente;
