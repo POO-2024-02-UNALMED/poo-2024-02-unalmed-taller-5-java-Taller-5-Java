@@ -71,5 +71,3 @@ public class Reptil extends Animal {
         this.largoCola = largoCola;
     }
 }
-
-}
