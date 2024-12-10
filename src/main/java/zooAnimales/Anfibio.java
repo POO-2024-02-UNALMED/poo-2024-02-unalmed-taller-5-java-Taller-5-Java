@@ -1,9 +1,9 @@
 package zooAnimales;
 
 public class Anfibio extends Animal {
-    private Anfibio[] listado = new Anfibio[0];
-    public int ranas = 0;
-    public int salamandras = 0; 
+    private static Anfibio[] listado = new Anfibio[0];
+    public static int ranas = 0;
+    public static int salamandras = 0; 
     private String colorPiel;
     private Boolean venenoso;
 
@@ -11,36 +11,36 @@ public class Anfibio extends Animal {
         agregarAlListado(this);
     }
 
-    public Anfibio(String nombre,Integer edad, String habitat, String genero, String colorPiel, Boolean venenoso) {
-        super(nombre, edad,habitat, genero, null);
+    public Anfibio(String nombre, Integer edad, String habitat, String genero, String colorPiel, Boolean venenoso) {
+        super(nombre, edad, habitat, genero, null);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
         agregarAlListado(this);
     }
 
-    public String movimiento() {
+    public static String movimiento() {
         return "saltar";
     }
 
-    public int cantidadAnfibios() {
+    public static int cantidadAnfibios() {
         return listado.length;
     }
 
-    public Anfibio crearRana(String nombre, Integer edad, String genero) {
-        Anfibio rana = new Anfibio(nombre,edad ,"selva", genero, "rojo", true);
+    public static Anfibio crearRana(String nombre, Integer edad, String genero) {
+        Anfibio rana = new Anfibio(nombre, edad, "selva", genero, "rojo", true);
         agregarAlListado(rana);
         ranas++; 
         return rana;
     }
 
-    public Anfibio crearSalamandra(String nombre,Integer edad, String genero) {
-        Anfibio salamandra = new Anfibio(nombre,edad, "selva", genero, "negro y amarillo", false);
+    public static Anfibio crearSalamandra(String nombre, Integer edad, String genero) {
+        Anfibio salamandra = new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
         agregarAlListado(salamandra);
         salamandras++; 
         return salamandra;
     }
 
-    private void agregarAlListado(Anfibio anfibio) {
+    private static void agregarAlListado(Anfibio anfibio) {
         Anfibio[] nuevoListado = new Anfibio[listado.length + 1];
         for (int i = 0; i < listado.length; i++) {
             nuevoListado[i] = listado[i];
@@ -48,13 +48,14 @@ public class Anfibio extends Animal {
         nuevoListado[listado.length] = anfibio;
         listado = nuevoListado;
     }
-  // Getters y Setters
-    public Anfibio[] getListado() {
+
+    // Getters y Setters
+    public static Anfibio[] getListado() {
         return listado;
     }
 
-    public void setListado(Anfibio[] listado) {
-        this.listado = listado;
+    public static void setListado(Anfibio[] listado) {
+        Anfibio.listado = listado;
     }
 
     public String getColorPiel() {
@@ -73,3 +74,4 @@ public class Anfibio extends Animal {
         this.venenoso = venenoso;
     }
 }
+
