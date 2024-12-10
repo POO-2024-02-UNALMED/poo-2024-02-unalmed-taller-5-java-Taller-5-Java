@@ -52,9 +52,10 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
 
-   public Zona[] getZona() {
-        return zonas.toArray(new Zona[0]);
-  }
+    public Zona[] getZona() {
+        return zonas;
+    }
+
 
 
     public void setZona(Zona[] zonas) {
