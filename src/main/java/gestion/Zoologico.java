@@ -8,12 +8,11 @@ public class Zoologico {
   public Zoologico() {
     }
 
-  public Zoologico(String nombre, String ubicacion, Zona[] zonas) {
-        this.nombre = nombre;
-        this.ubicacion = ubicacion;
-        this.zonas = zonas;
-    }
-
+  public Zoologico(String nombre, String ubicacion) {
+    this.nombre = nombre;
+    this.ubicacion = ubicacion;
+    this.zonas = new Zona[0]; 
+  }
   
     public void agregarZonas(Zona zona) {
         for (int i = 0; i < zonas.length; i++) {
