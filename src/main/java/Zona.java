@@ -1,3 +1,3 @@
-public class Zona{
+public class Zona extends Zoologico{
   
 }
