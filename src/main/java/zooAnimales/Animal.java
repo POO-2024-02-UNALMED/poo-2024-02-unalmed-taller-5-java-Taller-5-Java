@@ -5,6 +5,7 @@ import gestion.Zona;
 public class Animal {
   private Integer totalAnimales;
   private String nombre;
+  private Integer edad;
   private String habitat;
   private String genero;
   private Zona[] zona = new Zona[1];
@@ -13,17 +14,19 @@ public class Animal {
      totalAnimales++;
   }
 
-  public Animal(Integer totalAnimales, String nombre, String habitat, String genero, Zona[] zona) {
+  public Animal(Integer totalAnimales, String nombre,Integer edad, String habitat, String genero, Zona[] zona) {
         this.totalAnimales = totalAnimales;
         this.nombre = nombre;
+        this.edad= edad;
         this.habitat = habitat;
         this.genero = genero;
         this.zona = zona;
         totalAnimales++;
   }
       
-  public Animal(String nombre, String habitat, String genero, Zona[] zona) {
+  public Animal(String nombre, Integer edad,String habitat, String genero, Zona[] zona) {
         this.nombre = nombre;
+        this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
         this.zona = zona;
@@ -77,7 +80,13 @@ public class Animal {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    public Integer getEdad() {  
+      return edad;
+  }
 
+    public void setEdad(Integer edad) {  
+      this.edad = edad;
+  }
     public String getHabitat() {
         return habitat;
     }
@@ -104,13 +113,13 @@ public class Animal {
   
   @Override
   public String toString() {
-        String resultado = "Mi nombre es " + nombre +
-                           ", tengo una edad de desconocida, habito en " + habitat +
-                           " y mi genero es " + genero;
-        if (zona != null && zona[0] != null) {
-            resultado += ", la zona en la que me ubico es " + zona[0].getNombre() +
-                         ", en el " + (zona[0].getZoo()[0] != null ? zona[0].getZoo()[0].getNombre() : "zoo desconocido");
-        }
-        return resultado;
-  }
+      String resultado = "Mi nombre es " + nombre +
+                         ", tengo " + (edad != null ? edad + " años" : "una edad desconocida") + 
+                         ", habito en " + habitat + 
+                         " y mi genero es " + genero;
+      if (zona != null && zona[0] != null) {
+          resultado += ", la zona en la que me ubico es " + zona[0].getNombre() +
+                       ", en el " + (zona[0].getZoo()[0] != null ? zona[0].getZoo()[0].getNombre() : "zoo desconocido");
+      }
+    }
 }
