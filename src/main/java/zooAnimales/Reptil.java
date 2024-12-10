@@ -1,10 +1,10 @@
 package zooAnimales;
 
 public class Reptil extends Animal {
-  
-    private Reptil[] listado = new Reptil[0];
-    public int iguanas = 0;
-    public int serpientes = 0;
+
+    private static Reptil[] listado = new Reptil[0];  
+    public static int iguanas = 0;   
+    public static int serpientes = 0; 
     private String colorEscamas;
     private int largoCola;
 
@@ -12,29 +12,32 @@ public class Reptil extends Animal {
         agregarAlListado(this);
     }
 
-    public Reptil(String nombre,Integer edad, String habitat, String genero, String colorEscamas, int largoCola) {
-        super(nombre, edad,habitat, genero, null);
+    public Reptil(String nombre, Integer edad, String habitat, String genero, String colorEscamas, int largoCola) {
+        super(nombre, edad, habitat, genero, null);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
         agregarAlListado(this);
     }
 
-    public int cantidadReptiles() {
+    public static int cantidadReptiles() {  
         return listado.length;
     }
-    public Reptil crearIguana(String nombre, Integer edad, String genero) {
-        Reptil iguana = new Reptil(nombre, edad,"humedal", genero, "verde", 3);
+
+    public static Reptil crearIguana(String nombre, Integer edad, String genero) {
+        Reptil iguana = new Reptil(nombre, edad, "humedal", genero, "verde", 3);
         iguanas++;
         agregarAlListado(iguana);
         return iguana;
     }
-    public Reptil crearSerpiente(String nombre, Integer edad,String genero) {
-        Reptil serpiente = new Reptil(nombre, edad,"jungla", genero, "blanco", 1);
+
+    public static Reptil crearSerpiente(String nombre, Integer edad, String genero) {  
+        Reptil serpiente = new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
         serpientes++;
         agregarAlListado(serpiente);
         return serpiente;
     }
-    private void agregarAlListado(Reptil reptil) {
+
+    private static void agregarAlListado(Reptil reptil) { 
         Reptil[] nuevoListado = new Reptil[listado.length + 1];
         for (int i = 0; i < listado.length; i++) {
             nuevoListado[i] = listado[i];
@@ -42,17 +45,18 @@ public class Reptil extends Animal {
         nuevoListado[listado.length] = reptil;
         listado = nuevoListado;
     }
-    public String movimiento() {
+
+    public static String movimiento() {  
         return "reptar";
     }
 
     // Getters y Setters
-    public Reptil[] getListado() {
+    public static Reptil[] getListado() { 
         return listado;
     }
 
-    public void setListado(Reptil[] listado) {
-        this.listado = listado;
+    public static void setListado(Reptil[] listado) { 
+        Reptil.listado = listado;
     }
 
     public String getColorEscamas() {
