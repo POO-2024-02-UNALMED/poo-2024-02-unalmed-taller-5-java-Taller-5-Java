@@ -21,7 +21,13 @@ public class Animal {
         this.zona = zona;
         totalAnimales++;
   }
-
+      
+  public Animal(String nombre, String habitat, String genero, Zona[] zona) {
+        this.nombre = nombre;
+        this.habitat = habitat;
+        this.genero = genero;
+        this.zona = zona;
+      }
   public String movimiento(){
     return "desplazarse";
   }
