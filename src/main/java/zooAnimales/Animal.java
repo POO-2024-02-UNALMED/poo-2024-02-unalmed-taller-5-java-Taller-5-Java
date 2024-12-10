@@ -111,15 +111,17 @@ public class Animal {
         this.zona = zona;
     }
   
-  @Override
-  public String toString() {
-      String resultado = "Mi nombre es " + nombre +
-                         ", tengo " + (edad != null ? edad + " anos" : "una edad desconocida") + 
-                         ", habito en " + habitat + 
-                         " y mi genero es " + genero;
-      if (zona != null && zona[0] != null) {
-          resultado += ", la zona en la que me ubico es " + zona[0].getNombre() +
-                       ", en el " + (zona[0].getZoo()[0] != null ? zona[0].getZoo()[0].getNombre() : "zoo desconocido");
-      }
+@Override
+public String toString() {
+    String resultado = "Mi nombre es " + nombre +
+                       ", tengo " + (edad != null ? edad + " años" : "una edad desconocida") + 
+                       ", habito en " + habitat + 
+                       " y mi genero es " + genero;
+    if (zona != null && zona[0] != null) {
+        resultado += ", la zona en la que me ubico es " + zona[0].getNombre() +
+                     ", en el " + (zona[0].getZoo()[0] != null ? zona[0].getZoo()[0].getNombre() : "zoo desconocido");
     }
+    return resultado;  // Aquí es donde debe devolverse el resultado
+}
+
 }
